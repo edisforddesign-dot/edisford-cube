@@ -1,2 +1,1 @@
-# edisford-cube
-Interactive 3D cube for the Edisford Design website.
+Add six JPGs to images folder named front/back/left/right/top/bottom.jpg. Upload all files to GitHub. Enable Pages in Settings > Pages. Embed URL in Duda with an iframe.

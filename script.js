@@ -1,2 +1,1 @@
-document.querySelector("h1").innerHTML =
-"🎉 GitHub Pages is working!";
+const c=document.getElementById('cube');let rx=-15,ry=25,trx=rx,tryy=ry,idle=0;addEventListener('mousemove',e=>{idle=0;tryy=25+((e.clientX/innerWidth)-.5)*35;trx=-15-((e.clientY/innerHeight)-.5)*25});addEventListener('scroll',()=>{tryy=25+scrollY*.15});(function f(){idle++;if(idle>120)tryy+=.08;rx+=(trx-rx)*.06;ry+=(tryy-ry)*.06;c.style.transform=`rotateX(${rx}deg) rotateY(${ry}deg)`;requestAnimationFrame(f)})();
