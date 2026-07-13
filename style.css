@@ -1,4 +1,3 @@
-/* Page layout */
 body {
     margin: 0;
     height: 100vh;
@@ -10,15 +9,13 @@ body {
     font-family: sans-serif;
 }
 
-/* Scene wrapper */
 .scene {
     width: 200px;
     height: 200px;
     perspective: 800px;
-    touch-action: none; /* Mobile rotation fix */
+    touch-action: none;
 }
 
-/* Cube */
 .cube {
     width: 100%;
     height: 100%;
@@ -27,7 +24,6 @@ body {
     animation: autoSpin 8s linear infinite;
 }
 
-/* Cube faces */
 .cube-face {
     position: absolute;
     width: 200px;
@@ -43,7 +39,6 @@ body {
     backdrop-filter: blur(4px);
 }
 
-/* Face positions */
 .front  { transform: translateZ(100px); }
 .back   { transform: rotateY(180deg) translateZ(100px); }
 .right  { transform: rotateY(90deg) translateZ(100px); }
@@ -51,7 +46,6 @@ body {
 .top    { transform: rotateX(90deg) translateZ(100px); }
 .bottom { transform: rotateX(-90deg) translateZ(100px); }
 
-/* Auto-spin animation */
 @keyframes autoSpin {
     from { transform: rotateX(-15deg) rotateY(25deg); }
     to   { transform: rotateX(-15deg) rotateY(385deg); }

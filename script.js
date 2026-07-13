@@ -4,12 +4,10 @@ let startX, startY;
 let rotateX = -15;
 let rotateY = 25;
 
-// Stop auto-spin when user interacts
 function stopSpin() {
     cube.style.animation = "none";
 }
 
-// Mouse events
 document.addEventListener('mousedown', (e) => {
     isDragging = true;
     startX = e.clientX;
@@ -36,7 +34,6 @@ document.addEventListener('mousemove', (e) => {
     startY = e.clientY;
 });
 
-// Touch events (mobile)
 document.addEventListener('touchstart', (e) => {
     isDragging = true;
     startX = e.touches[0].clientX;
@@ -51,7 +48,7 @@ document.addEventListener('touchend', () => {
 document.addEventListener('touchmove', (e) => {
     if (!isDragging) return;
 
-    e.preventDefault(); // IMPORTANT for mobile
+    e.preventDefault();
 
     let dx = e.touches[0].clientX - startX;
     let dy = e.touches[0].clientY - startY;
