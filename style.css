@@ -10,15 +10,15 @@ body {
     font-family: sans-serif;
 }
 
-/* Container that holds the cube */
-.cube-container {
+/* Scene wrapper */
+.scene {
     width: 200px;
     height: 200px;
     perspective: 800px;
-    touch-action: none; /* IMPORTANT for mobile rotation */
+    touch-action: none; /* Mobile rotation fix */
 }
 
-/* The cube itself */
+/* Cube */
 .cube {
     width: 100%;
     height: 100%;
@@ -28,11 +28,11 @@ body {
 }
 
 /* Cube faces */
-.cube div {
+.cube-face {
     position: absolute;
     width: 200px;
     height: 200px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     border: 2px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
     display: flex;
