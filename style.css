@@ -22,13 +22,13 @@ body {
     transform: rotateX(-15deg) rotateY(25deg);
     transition: transform 1s ease;
     animation: spin 12s linear infinite;
+    touch-action: none;   /* ← required for mobile rotation */
 }
 
 @keyframes spin {
     from { transform: rotateX(-15deg) rotateY(0deg); }
     to   { transform: rotateX(-15deg) rotateY(360deg); }
 }
-
 
 .cube-face {
     position: absolute;
@@ -39,7 +39,6 @@ body {
     backface-visibility: hidden;
 }
 
-/* Correct face positions */
 .front  { transform: rotateY(0deg) translateZ(150px); }
 .back   { transform: rotateY(180deg) translateZ(150px); }
 .right  { transform: rotateY(90deg) translateZ(150px); }
